@@ -5,29 +5,53 @@ export function Bars({
   xScale,
   yScale,
   height,
+  width,
+  horizontal = false,
 }: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   data: any;
-  yScale: ScaleLinear<number, number>;
-  xScale: ScaleBand<string>;
+  // Changed types to allow x and y scales to swap roles
+  yScale: ScaleBand<string> | ScaleLinear<number, number>;
+  xScale: ScaleLinear<number, number> | ScaleBand<string>;
   height: number;
+  width: number;
+  horizontal?: boolean;
 }) {
   return (
     <g>
-      {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      data.map((d: any, i: number) => (
-        <rect
-          key={i}
-          x={xScale(d.name)}
-          y={yScale(d.value)}
-          width={xScale.bandwidth()}
-          height={height - yScale(d.value)}
-          fill="transparent"
-          stroke="currentColor"
-        />
-      ))
-}
+      {data.map((d: any, i: number) => {
+        if (horizontal) {
+          // SIDEWAYS LOGIC
+          const sX = xScale as ScaleLinear<number, number>;
+          const sY = yScale as ScaleBand<string>;
+          return (
+            <rect
+              key={i}
+              x={0} // Start at the left edge (the Y-axis)
+              y={sY(d.name)} // Position vertically by name
+              width={sX(d.value)} // Length is determined by the numeric value
+              height={sY.bandwidth()} // Thickness of the bar
+              fill="transparent"
+              stroke="currentColor"
+            />
+          );
+        }
+
+        // VERTICAL LOGIC (Original)
+        const sX = xScale as ScaleBand<string>;
+        const sY = yScale as ScaleLinear<number, number>;
+        return (
+          <rect
+            key={i}
+            x={sX(d.name)}
+            y={sY(d.value)}
+            width={sX.bandwidth()}
+            height={(height || 0) - sY(d.value)}
+            fill="transparent"
+            stroke="currentColor"
+          />
+        );
+      })}
     </g>
   );
 }

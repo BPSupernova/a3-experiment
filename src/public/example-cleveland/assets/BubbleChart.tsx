@@ -1,57 +1,81 @@
 import * as d3 from 'd3';
-import { Bubbles } from './chartcomponents/Bubbles';
-import { DotMarks } from './chartcomponents/DotMarks';
 import { useChartDimensions } from './hooks/useChartDimensions';
+import { Bars } from './chartcomponents/Bars';
+import { NumericAxisH } from './chartcomponents/NumericAxisH'; // Swapped from V to H
+import { OrdinalAxisVWithDotMarks } from './chartcomponents/OrdinalAxisVWithDotMarks'; // Swapped from H to V
 
 const chartSettings = {
   marginBottom: 40,
-  marginLeft: 40,
+  marginLeft: 100, // Increased margin for horizontal labels
   marginTop: 15,
   marginRight: 15,
-  height: 400,
   width: 400,
+  height: 400,
 };
-
-const createBubbleData = (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  { data }: { data: any[] },
-  width = 100,
-  height = 100,
-) => {
-  const dataArr = data.map((d) => +d.value);
-  const jsonData = { children: dataArr.map((d) => ({ value: d })) };
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const bubble: any = d3
-    .pack()
-    .size([width - 10, height - 10])
-    .padding(1.5);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const bubbleNodes = d3.hierarchy(jsonData).sum((d: any) => d.value);
-  return bubble(bubbleNodes)
-    .descendants()
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    .filter((d: any) => !d.children).map((d: any, idx: number) => ({ bubble: d, data: data[idx] }));
-};
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const createMarkPositions = (bubbleData: any[], selected: number[]) => bubbleData.filter((d, i) => selected.includes(i)).map(({ bubble: d }) => ({ x: d.x, y: d.y }));
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function BubbleChart({ parameters }: { parameters: any }) {
+  const tickLength = 6;
   const [ref, dms] = useChartDimensions(chartSettings);
-  const bubbleData = createBubbleData(parameters, dms.width, dms.height);
-  const markPositions = createMarkPositions(bubbleData, parameters.selectedIndices);
+
+  // xScale is now Numeric (Linear)
+  const xScale = d3
+    .scaleLinear()
+    .domain([0, 100]) 
+    .range([0, dms.boundedWidth]);
+
+  // yScale is now Categorical (Band)
+  const yScale = d3
+    .scaleBand()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    .domain(parameters.data.map((d: { name: any }) => d.name))
+    .range([0, dms.boundedHeight])
+    .padding(0.2);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const xAxisTickFilter = (ticks: any[]) => ticks.filter((t, i) => i === 0 || i === ticks.length - 1);
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const yAxisTickFilter = (ticks: any[]) => ticks.filter((t, i) => parameters.selectedIndices.includes(i));
 
   return (
-    <div className="Chart__wrapper" ref={ref} style={{ height: '400px' }}>
+    <div className="Chart__wrapper" ref={ref} style={{ height: 400 }}>
       <svg width={dms.width} height={dms.height}>
         <g
-          transform={`translate(${[dms.marginLeft / 2, dms.marginTop / 2].join(
-            ',',
-          )})`}
+          transform={`translate(${[dms.marginLeft, dms.marginTop].join(',')})`}
         >
-          <Bubbles data={bubbleData} />
-          <DotMarks positions={markPositions} />
+          {/* X-Axis is now Numeric (at the bottom) */}
+          <g transform={`translate(${[0, dms.boundedHeight].join(',')})`}>
+            <NumericAxisH
+              domain={xScale.domain()}
+              range={xScale.range()}
+              withTick
+              tickLen={tickLength}
+              tickFilter={xAxisTickFilter}
+            />
+          </g>
+
+          {/* Y-Axis is now Ordinal (on the left) */}
+          <g transform={`translate(${[0, 0].join(',')})`}>
+            <OrdinalAxisVWithDotMarks
+              domain={yScale.domain()}
+              range={yScale.range()}
+              withTick
+              tickLen={0}
+              tickFilter={yAxisTickFilter}
+            />
+          </g>
+
+          {/* Pass the new scales to Bars */}
+          <g transform={`translate(${[0, 0].join(',')})`}>
+            <Bars
+              data={parameters.data}
+              xScale={xScale}
+              yScale={yScale}
+              horizontal // You must ensure your Bars component handles this
+              width={dms.boundedWidth}
+            />
+          </g>
         </g>
       </svg>
     </div>
