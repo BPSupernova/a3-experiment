@@ -23,11 +23,11 @@
     "withSidebar": true
   },
   "baseComponents": {
-    "bubbleChart": {
+    "horizontalBarChart": {
       "description": "A bubble chart with correct answer of 0.66",
       "instruction": "Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?",
       "type": "react-component",
-      "path": "example-cleveland/assets/BubbleChart.tsx",
+      "path": "example-cleveland/assets/HorizontalBarChart.tsx",
       "parameters": {
         "data": [
           {
@@ -235,8 +235,8 @@
       "path": "example-cleveland/assets/cm-training.png",
       "response": []
     },
-    "trainingBubbleChart1": {
-      "baseComponent": "bubbleChart",
+    "trainingHorizontalBarChart1": {
+      "baseComponent": "horizontalBarChart",
       "description": "A bubble chart with correct answer of 0.66",
       "parameters": {
         "selectedIndices": [
@@ -301,8 +301,8 @@
         }
       ]
     },
-    "bubbleChart1": {
-      "baseComponent": "bubbleChart",
+    "HorizontalBarChart1": {
+      "baseComponent": "horizontalBarChart",
       "parameters": {
         "selectedIndices": [
           1,
@@ -368,8 +368,8 @@
         ]
       }
     },
-    "bubbleChart2": {
-      "baseComponent": "bubbleChart",
+    "HorizontalBarChart2": {
+      "baseComponent": "horizontalBarChart",
       "parameters": {
         "selectedIndices": [
           0,
@@ -444,16 +444,16 @@
     "components": [
       "introduction",
       "training1",
-      "trainingBubbleChart1",
+      "trainingHorizontalBarChart1",
       "trainingStackedBarChart1",
       "trainingBarChart1",
       "trainingPieChart1",
-      "bubbleChart1",
+      "HorizontalBarChart1",
       "stackedBarChart1",
       "stackedBarChart2",
       "pieChart1",
       "barChart1",
-      "bubbleChart2",
+      "HorizontalBarChart2",
       "stackedBarChart3",
       "stackedBarChart4",
       "pieChart2",
