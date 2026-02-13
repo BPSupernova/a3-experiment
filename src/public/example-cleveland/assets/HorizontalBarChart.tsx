@@ -73,7 +73,7 @@ function HorizontalBarChart({ parameters }: { parameters: any }) {
               xScale={xScale}
               yScale={yScale}
               horizontal // You must ensure your Bars component handles this
-              width={dms.boundedWidth}
+              height={dms.boundedHeight}
             />
           </g>
         </g>

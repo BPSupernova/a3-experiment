@@ -5,7 +5,6 @@ export function Bars({
   xScale,
   yScale,
   height,
-  width,
   horizontal = false,
 }: {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -18,6 +17,7 @@ export function Bars({
 }) {
   return (
     <g>
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       {data.map((d: any, i: number) => {
         if (horizontal) {
           // SIDEWAYS LOGIC

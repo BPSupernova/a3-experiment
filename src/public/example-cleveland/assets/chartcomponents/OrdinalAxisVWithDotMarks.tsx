@@ -28,16 +28,21 @@ export function OrdinalAxisVWithDotMarks({
         fill="none"
         stroke="currentColor"
       />
-      {withTick &&
-        ticks.map(({ value, yOffset }: any) => (
-          <g key={value} transform={`translate(-15, ${yOffset})`}>
-            <circle r={2} cx={0} cy={0} fill="currentColor" />
-            {/* text style to make the correct the labels position */}
-            <text 
-                style={{ fontSize: '10px', textAnchor: 'end', alignmentBaseline: 'middle' }}
-                x="-5"
+      {withTick
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        && ticks.map(({ value, yOffset }: any) => (
+          <g key={value} transform={`translate(0, ${yOffset})`}>
+            <circle r={2} fill="currentColor" />
+            <text
+              x={-10}
+              style={{
+                fontSize: '10px',
+                textAnchor: 'end',
+                alignmentBaseline: 'middle',
+                fill: 'currentColor',
+              }}
             >
-                {value}
+              {value}
             </text>
           </g>
         ))}
