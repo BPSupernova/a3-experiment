@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/GlobalConfigSchema.json",
   "configsList": [
+    "demo-cleveland",
     "tutorial",
     "tutorial-replication",
     "demo-html",
@@ -20,7 +21,6 @@
     "demo-yaml",
     "demo-ranking-widget",
     "example-brush-interactions",
-    "example-cleveland",
     "example-mvnv",
     "example-VLAT-adaptive",
     "example-VLAT-full-randomized",
@@ -52,6 +52,9 @@
     "test-step-logic"
   ],
   "configs": {
+    "demo-cleveland": {
+      "path": "example-cleveland/config.json"
+    },
     "tutorial": {
       "path": "tutorial/config.json"
     },
@@ -108,9 +111,6 @@
     },
     "example-brush-interactions": {
       "path": "example-brush-interactions/config.json"
-    },
-    "example-cleveland": {
-      "path": "example-cleveland/config.json"
     },
     "example-mvnv": {
       "path": "example-mvnv/config.json"
