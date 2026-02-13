@@ -14,7 +14,6 @@ export function Bars({
   yScale: ScaleBand<string> | ScaleLinear<number, number>;
   xScale: ScaleLinear<number, number> | ScaleBand<string>;
   height: number;
-  width: number;
   horizontal?: boolean;
 }) {
   return (

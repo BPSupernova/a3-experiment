@@ -14,14 +14,14 @@ const chartSettings = {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function BubbleChart({ parameters }: { parameters: any }) {
+function HorizontalBarChart({ parameters }: { parameters: any }) {
   const tickLength = 6;
   const [ref, dms] = useChartDimensions(chartSettings);
 
   // xScale is now Numeric (Linear)
   const xScale = d3
     .scaleLinear()
-    .domain([0, 100]) 
+    .domain([0, 100])
     .range([0, dms.boundedWidth]);
 
   // yScale is now Categorical (Band)
@@ -82,4 +82,4 @@ function BubbleChart({ parameters }: { parameters: any }) {
   );
 }
 
-export default BubbleChart;
+export default HorizontalBarChart;
