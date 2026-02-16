@@ -6,6 +6,7 @@ export function OrdinalAxisHWithDotMarks({
   range = [10, 100],
   withTick = true,
   tickLen = 5,
+  flipped = 1,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tickFilter = (t: any[]) => t,
 }) {
@@ -38,7 +39,7 @@ export function OrdinalAxisHWithDotMarks({
       {withTick
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
         && ticks.map(({ value, xOffset }: any) => (
-          <g key={value} transform={`translate(${xOffset}, 10)`}>
+          <g key={value} transform={`translate(${xOffset}, ${flipped * 10})`}>
             <circle key={value} r={2} cx={0} cy={0}>
               {value}
             </circle>

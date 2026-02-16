@@ -32,7 +32,7 @@ export function OrdinalAxisVWithDotMarks({
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         && ticks.map(({ value, yOffset }: any) => (
           <g key={value} transform={`translate(0, ${yOffset})`}>
-            <circle r={2} fill="currentColor" />
+            <circle cx={10} r={2} fill="currentColor" />
             <text
               x={-10}
               style={{

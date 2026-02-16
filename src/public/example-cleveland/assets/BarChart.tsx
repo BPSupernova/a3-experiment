@@ -52,6 +52,7 @@ function BarChart({ parameters }: { parameters: any }) {
               range={xScale.range()}
               withTick
               tickLen={0}
+              flipped={-1}
               tickFilter={xAxisTickFilter}
             />
           </g>
