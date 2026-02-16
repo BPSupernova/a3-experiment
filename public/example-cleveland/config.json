@@ -242,6 +242,16 @@
         "selectedIndices": [
           1,
           4
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       },
       "provideFeedback": true,
@@ -259,6 +269,16 @@
         "selectedIndices": [
           1,
           4
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       },
       "provideFeedback": true,
@@ -275,6 +295,16 @@
         "selectedIndices": [
           1,
           4
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       },
       "provideFeedback": true,
@@ -291,6 +321,16 @@
         "selectedIndices": [
           1,
           4
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -300,6 +340,16 @@
         "selectedIndices": [
           1,
           4
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -309,6 +359,16 @@
         "selectedIndices": [
           1,
           4
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -318,6 +378,16 @@
         "selectedIndices": [
           2,
           4
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -327,6 +397,16 @@
         "selectedIndices": [
           1,
           2
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -336,6 +416,16 @@
         "selectedIndices": [
           0,
           4
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -345,6 +435,16 @@
         "selectedIndices": [
           0,
           3
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -354,6 +454,16 @@
         "selectedIndices": [
           2,
           3
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -363,6 +473,16 @@
         "selectedIndices": [
           0,
           1
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -372,6 +492,16 @@
         "selectedIndices": [
           3,
           4
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -381,6 +511,16 @@
         "selectedIndices": [
           1,
           2
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -390,6 +530,16 @@
         "selectedIndices": [
           1,
           3
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -399,6 +549,16 @@
         "selectedIndices": [
           3,
           4
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -408,6 +568,16 @@
         "selectedIndices": [
           1,
           4
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
@@ -417,6 +587,16 @@
         "selectedIndices": [
           0,
           3
+        ],
+        "response": [
+          {
+            "id": "response",
+            "prompt": "Answer:",
+            "location": "sidebar",
+            "type": "numerical",
+            "max": 100,
+            "min": 0
+          }
         ]
       }
     },
