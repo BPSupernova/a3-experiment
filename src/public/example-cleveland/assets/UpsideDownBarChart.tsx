@@ -2,7 +2,7 @@ import * as d3 from 'd3';
 import { NumericAxisV } from './chartcomponents/NumericAxisV';
 import { OrdinalAxisHWithDotMarks } from './chartcomponents/OrdinalAxisHWithDotMarks';
 import { useChartDimensions } from './hooks/useChartDimensions';
-// testing
+
 const chartSettings = {
   marginBottom: 40,
   marginLeft: 40,
