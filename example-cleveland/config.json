@@ -240,7 +240,7 @@
       "description": "A bubble chart with correct answer of 0.66",
       "parameters": {
         "selectedIndices": [
-          1,
+          3,
           4
         ],
         "response": [
@@ -294,7 +294,7 @@
       "parameters": {
         "selectedIndices": [
           1,
-          4
+          2
         ],
         "response": [
           {
@@ -311,7 +311,7 @@
       "correctAnswer": [
         {
           "id": "cm-response",
-          "answer": 66
+          "answer": 80
         }
       ]
     },
