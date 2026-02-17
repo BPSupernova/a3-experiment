@@ -18,18 +18,6 @@ test('test', async ({ page }) => {
   // Click on the next button
   await page.getByRole('button', { name: 'Next', exact: true }).click();
 
-  // Check the page contains consent form
-  const consent = await page.getByRole('heading', { name: 'Consent' });
-  await expect(consent).toBeVisible();
-
-  // Fill the consent form
-  await page.getByPlaceholder('Please provide your signature').click();
-  await page.getByPlaceholder('Please provide your signature').fill('test');
-  await page.getByLabel('Accept').check();
-
-  // Click on the next button
-  await page.getByRole('button', { name: 'Agree' }).click();
-
   // Check the page contains the training image
   const trainingImg = await page.getByRole('main').getByRole('img');
   await expect(trainingImg).toBeVisible();
@@ -94,8 +82,6 @@ test('test', async ({ page }) => {
   // Check for the post study survey and fill it out
   await page.getByPlaceholder('Enter your preference').click();
   await page.getByRole('option', { name: 'Bar', exact: true }).click();
-  await page.getByPlaceholder('Enter your age here, range from 0 - 100').fill('25');
-  await page.getByLabel('5', { exact: true }).check();
   await page.getByPlaceholder('Enter your comments here').fill('Test Test');
   await page.getByRole('button', { name: 'Next', exact: true }).click();
 
