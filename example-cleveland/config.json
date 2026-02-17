@@ -332,7 +332,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 66
+        }
+      ]
     },
     "barChart1": {
       "baseComponent": "barChart",
@@ -351,7 +358,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 66
+        }
+      ]
     },
     "upsideDownChart1": {
       "baseComponent": "upsideDownBarChart",
@@ -370,7 +384,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 66
+        }
+      ]
     },
     "HorizontalBarChart2": {
       "baseComponent": "horizontalBarChart",
@@ -389,7 +410,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 83
+        }
+      ]
     },
     "barChart2": {
       "baseComponent": "barChart",
@@ -408,7 +436,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 80
+        }
+      ]
     },
     "upsideDownChart2": {
       "baseComponent": "upsideDownBarChart",
@@ -427,7 +462,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 50
+        }
+      ]
     },
     "HorizontalBarChart3": {
       "baseComponent": "horizontalBarChart",
@@ -446,7 +488,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 75
+        }
+      ]
     },
     "barChart3": {
       "baseComponent": "barChart",
@@ -465,7 +514,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 80
+        }
+      ]
     },
     "upsideDownChart3": {
       "baseComponent": "upsideDownBarChart",
@@ -484,7 +540,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 75
+        }
+      ]
     },
     "HorizontalBarChart4": {
       "baseComponent": "horizontalBarChart",
@@ -503,7 +566,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 66
+        }
+      ]
     },
     "barChart4": {
       "baseComponent": "barChart",
@@ -522,7 +592,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 80
+        }
+      ]
     },
     "upsideDownChart4": {
       "baseComponent": "upsideDownBarChart",
@@ -541,7 +618,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 100
+        }
+      ]
     },
     "HorizontalBarChart5": {
       "baseComponent": "horizontalBarChart",
@@ -560,7 +644,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 66
+        }
+      ]
     },
     "barChart5": {
       "baseComponent": "barChart",
@@ -579,7 +670,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 66
+        }
+      ]
     },
     "upsideDownChart5": {
       "baseComponent": "upsideDownBarChart",
@@ -598,7 +696,14 @@
             "min": 0
           }
         ]
-      }
+      },
+      "provideFeedback": false,
+      "correctAnswer": [
+        {
+          "id": "cm-response",
+          "answer": 75
+        }
+      ]
     },
     "post-study-survey1": {
       "type": "questionnaire",
