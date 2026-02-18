@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/GlobalConfigSchema.json",
   "configsList": [
-    "demo-cleveland",
+    "example-cleveland",
     "tutorial",
     "tutorial-replication",
     "demo-html",
@@ -52,7 +52,7 @@
     "test-step-logic"
   ],
   "configs": {
-    "demo-cleveland": {
+    "example-cleveland": {
       "path": "example-cleveland/config.json"
     },
     "tutorial": {
