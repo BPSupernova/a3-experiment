@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 
 // Work on importing class file
 class View {
