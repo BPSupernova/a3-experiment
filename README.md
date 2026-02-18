@@ -44,7 +44,7 @@ Requirements
 - After each trial, implement code that grades and stores participant’s responses.
 - At the end of the experiment, to get the data, one easy option use Javascript to show the data from the current experiment\* (i.e. a comma separated list in a text box) and copy it into your master datafile. See the Background section below for an example of what this file should look like. (\*Alternately implement a server, if you're experienced with that sort of thing.)
 
-** DATA SCIENTISTS! IT IS YOUR TIME TO SHINE **
+** HI DATA SCIENTISTS! IT IS YOUR TIME TO SHINE **
 
 - Figure out how to calculate "Error", the difference between the true percentage and the reported percentage.
 - Scale this error using Cleveland and McGill’s log-base-2 error equation. For details, see the background section (there’s a figure with the equation). This becomes your “Error” column in the output. Make sure you use whole percentages (not decimal) in the log-base-2 equation. Make sure you handle the case of when a person gets the exact percentage correct (log-base-2 of 1/8 is -3, it is better to set this to 0). 
