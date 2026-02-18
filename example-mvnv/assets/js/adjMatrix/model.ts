@@ -155,7 +155,7 @@ class Model {
    */
   getApplicationState() {
     return {
-      currentState: () => this.provenance.current().getState()
+      currentState: () => this.provenance.current().getState();
     };
   }
 
