@@ -20,7 +20,8 @@
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": true,
     "autoDownloadStudy": false,
-    "withSidebar": true
+    "withSidebar": true,
+    "allowFailedTraining": true
   },
   "baseComponents": {
     "horizontalBarChart": {
