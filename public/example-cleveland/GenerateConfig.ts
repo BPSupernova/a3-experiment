@@ -13,26 +13,36 @@ function generateTrials() {
   const dynamicComponents: any = {};
   const sequenceList: string[] = [];
 
+  // Generate data and indices once per trial number (so all chart types share the same data for trial i)
+  const trialDataMap: Record<number, { data: any[], indices: number[], correctPct: number }> = {};
+  
+  for (let i = 1; i <= trialsPerType; i++) {
+    // Generate 5 random data points
+    const numPoints = 5;
+    const data = Array.from({ length: numPoints }, (_, j) => ({
+      name: String.fromCharCode(65 + j),
+      value: Math.floor(Math.random() * 91) + 10,
+    }));
+
+    // Pick 2 random indices to compare
+    const indices = [...Array(numPoints).keys()]
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 2);
+
+    const val1 = data[indices[0]].value;
+    const val2 = data[indices[1]].value;
+
+    // True Percent: (smaller / larger) * 100
+    const correctPct = Math.round((Math.min(val1, val2) / Math.max(val1, val2)) * 100);
+
+    trialDataMap[i] = { data, indices, correctPct };
+  }
+
+  // Now create components for each chart type, reusing the same data for each trial number
   chartTypes.forEach((type) => {
     for (let i = 1; i <= trialsPerType; i++) {
-      // Generate 5 random data points
-      const numPoints = 5;
-      const data = Array.from({ length: numPoints }, (_, j) => ({
-        name: String.fromCharCode(65 + j),
-        value: Math.floor(Math.random() * 91) + 10,
-      }));
-
-      // Pick 2 random indices to compare
-      const indices = [...Array(numPoints).keys()]
-        .sort(() => 0.5 - Math.random())
-        .slice(0, 2);
-
-      const val1 = data[indices[0]].value;
-      const val2 = data[indices[1]].value;
-
-      // True Percent: (smaller / larger) * 100
-      const correctPct = Math.round((Math.min(val1, val2) / Math.max(val1, val2)) * 100);
-
+      const { data, indices, correctPct } = trialDataMap[i];
+      
       const trialId = `${type}_${i}`;
       dynamicComponents[trialId] = {
         baseComponent: type,
@@ -75,26 +85,6 @@ const fullConfig = {
       instruction: 'Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?',
       type: 'react-component',
       path: 'example-cleveland/assets/HorizontalBarChart.tsx',
-      parameters: {
-        data: [
-          { name: 'A', value: '30' },
-          { name: 'B', value: '40' },
-          { name: 'C', value: '50' },
-          { name: 'D', value: '40' },
-          { name: 'E', value: '60' },
-        ],
-        selectedIndices: [1, 4],
-      },
-      response: [{ id: 'cm-response', prompt: 'Answer:', location: 'sidebar', type: 'numerical', placeholder: '0-100', max: 100, min: 0 }],
-      nextButtonLocation: 'sidebar',
-      instructionLocation: 'sidebar',
-    },
-    stackedBarChart: {
-      meta: { difficulty: 5, chart: 'stacked bar' },
-      description: 'A chart with correct answer of 0.66',
-      instruction: 'Two values are marked with dots. \n\nWhat percentage do you believe the smaller value represents relative to the larger value?',
-      type: 'react-component',
-      path: 'example-cleveland/assets/StackedBarChart.tsx',
       parameters: {
         data: [
           { name: 'A', value: '30' },
