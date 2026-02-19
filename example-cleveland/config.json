@@ -204,7 +204,7 @@
         ]
       },
       "provideFeedback": true,
-      "allowFailedTraining": false,
+      "allowFailedTraining": true,
       "correctAnswer": [
         {
           "id": "cm-response",
