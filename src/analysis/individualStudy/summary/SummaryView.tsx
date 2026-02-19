@@ -5,6 +5,7 @@ import { StudyConfig } from '../../../parser/types';
 import { OverviewStats } from './OverviewStats';
 import { ComponentStats } from './ComponentStats';
 import { ResponseStats } from './ResponseStats';
+import { Log2ErrorStats } from './Log2ErrorStats';
 import {
   calculateParticipantCounts, calculateCorrectnessStats, calculateTimeStats, calculateDateStats, calculateComponentStats,
   calculateResponseStats, getResponseOptions,
@@ -81,6 +82,8 @@ export function SummaryView({ visibleParticipants, studyConfig }: {
         <ComponentStats visibleParticipants={visibleParticipants} />
         <ResponseStats visibleParticipants={visibleParticipants} studyConfig={studyConfig} />
       </Group>
+
+      <Log2ErrorStats visibleParticipants={visibleParticipants} />
     </Stack>
   );
 }
