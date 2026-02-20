@@ -14,6 +14,7 @@ export interface TrialLog2ErrorStats {
     medianLog2Error: number;
     minLog2Error: number;
     maxLog2Error: number;
+    stdDevLog2Error: number;
   }>;
 }
 
