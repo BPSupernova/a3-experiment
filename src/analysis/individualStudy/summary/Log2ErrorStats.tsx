@@ -11,6 +11,7 @@ import { useMemo } from 'react';
 import { ParticipantData } from '../../../storage/types';
 import { calculateTrialLog2ErrorStats } from '../../../utils/calculateTrialLog2ErrorStats';
 import { exportClevelandTrialsToCSV } from '../../../utils/exportClevelandTrialsToCSV';
+import { exportClevelandSummaryToCSV } from '../../../utils/exportClevelandSummaryToCSV';
 
 export function Log2ErrorStats({ visibleParticipants }: { visibleParticipants: ParticipantData[] }) {
   const stats = useMemo(() => calculateTrialLog2ErrorStats(visibleParticipants), [visibleParticipants]);
@@ -158,17 +159,17 @@ export function Log2ErrorStats({ visibleParticipants }: { visibleParticipants: P
                   size="xs"
                   variant="outline"
                   onClick={() => {
-                    const csv = exportClevelandTrialsToCSV(visibleParticipants);
+                    const csv = exportClevelandSummaryToCSV(visibleParticipants);
                     const a = document.createElement('a');
                     a.href = `data:text/csv;charset=utf-8,${encodeURIComponent(csv)}`;
-                    a.download = 'cleveland-results.csv';
+                    a.download = 'cleveland-summary.csv';
                     document.body.appendChild(a);
                     a.click();
                     a.remove();
                   }}
                   leftSection={<IconDownload size={14} />}
                 >
-                  Download CSV
+                  Download Summary CSV
                 </Button>
                 <IconChartBar size={20} />
               </Group>
