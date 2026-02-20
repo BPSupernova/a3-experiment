@@ -1,7 +1,7 @@
 ## Vertical vs. Horizontal vs. Upside-Down Bar Chart Study
 Link: https://bpsupernova.github.io/a3-experiment/
 
-## Done by Benjamin Perry, Ha Chu, Yanhong Liu, & Connor McCoy
+## Done by Benjamin Perry, Ha Chu, Yanhong Liu, & Conor McCoy
 
 ## General Description of the Study
 This study attempts to discern whether there is an optimal version of the bar chart to use in studies. We approach this study by hypothesizing sideways bar charts are most optimal. Optimal in this case refers to the quality of a bar chart to allow the user better performance on the study task (in this case being guessing what percent of the larger chosen bar does the smaller chosen bar represent). Optimality is tested by analyzing user data taken through 20 trials (per user) of each of the three bar chart types (vertical, horizontal, and upside down) and calculating the error between guessed and actual values (of the percent of the larger chosen bar that the smaller chosen bar represents). The trials and bar lengths are randomly ordered/numbered after the training, while training itself is fixed. We have provided some screenshots of the study below.
